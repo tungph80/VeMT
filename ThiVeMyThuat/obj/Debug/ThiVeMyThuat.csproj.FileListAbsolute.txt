@@ -63,8 +63,6 @@ C:\ThiVeMyThuat\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.exe
 C:\ThiVeMyThuat\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.pdb
 C:\ThiVeMyThuat\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.csprojResolveAssemblyReference.cache
 E:\Google Drive\DHXD HN\Tuyen sinh\2015\ThiVeMyThuat\ThiVeMyThuat\bin\Debug\ThiVeMyThuat.exe.config
-E:\Google Drive\DHXD HN\Tuyen sinh\2015\ThiVeMyThuat\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.exe
-E:\Google Drive\DHXD HN\Tuyen sinh\2015\ThiVeMyThuat\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.pdb
 E:\Google Drive\DHXD HN\Tuyen sinh\2015\ThiVeMyThuat\ThiVeMyThuat\bin\Debug\ThiVeMyThuat.exe
 E:\Google Drive\DHXD HN\Tuyen sinh\2015\ThiVeMyThuat\ThiVeMyThuat\bin\Debug\ThiVeMyThuat.pdb
 E:\Google Drive\DHXD HN\Tuyen sinh\2015\ThiVeMyThuat\ThiVeMyThuat\bin\Debug\ComponentFactory.Krypton.Docking.dll
@@ -86,16 +84,18 @@ E:\Google Drive\DHXD HN\Tuyen sinh\2015\ThiVeMyThuat\ThiVeMyThuat\bin\Debug\Perp
 E:\Google Drive\DHXD HN\Tuyen sinh\2015\ThiVeMyThuat\ThiVeMyThuat\bin\Debug\PerpetuumSoft.Instrumentation.xml
 E:\Google Drive\DHXD HN\Tuyen sinh\2015\ThiVeMyThuat\ThiVeMyThuat\bin\Debug\PerpetuumSoft.Reporting.xml
 E:\Google Drive\DHXD HN\Tuyen sinh\2015\ThiVeMyThuat\ThiVeMyThuat\bin\Debug\PerpetuumSoft.Framework.Export.xml
-E:\Google Drive\DHXD HN\Tuyen sinh\2015\ThiVeMyThuat\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.csprojResolveAssemblyReference.cache
+E:\Google Drive\DHXD HN\Tuyen sinh\2015\ThiVeMyThuat\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.FrmDsDinhChinh.resources
+E:\Google Drive\DHXD HN\Tuyen sinh\2015\ThiVeMyThuat\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.FrmDsPhongThi.resources
 E:\Google Drive\DHXD HN\Tuyen sinh\2015\ThiVeMyThuat\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.FrmDsAnh.resources
+E:\Google Drive\DHXD HN\Tuyen sinh\2015\ThiVeMyThuat\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.FrmDsThuLePhi.resources
 E:\Google Drive\DHXD HN\Tuyen sinh\2015\ThiVeMyThuat\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.FrmInTheDuThi.resources
 E:\Google Drive\DHXD HN\Tuyen sinh\2015\ThiVeMyThuat\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.FrmMain.resources
 E:\Google Drive\DHXD HN\Tuyen sinh\2015\ThiVeMyThuat\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.Properties.Resources.resources
 E:\Google Drive\DHXD HN\Tuyen sinh\2015\ThiVeMyThuat\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.csproj.GenerateResource.Cache
 E:\Google Drive\DHXD HN\Tuyen sinh\2015\ThiVeMyThuat\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.exe.licenses
-E:\Google Drive\DHXD HN\Tuyen sinh\2015\ThiVeMyThuat\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.FrmDsDinhChinh.resources
-E:\Google Drive\DHXD HN\Tuyen sinh\2015\ThiVeMyThuat\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.FrmDsPhongThi.resources
-E:\Google Drive\DHXD HN\Tuyen sinh\2015\ThiVeMyThuat\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.FrmDsThuLePhi.resources
+E:\Google Drive\DHXD HN\Tuyen sinh\2015\ThiVeMyThuat\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.exe
+E:\Google Drive\DHXD HN\Tuyen sinh\2015\ThiVeMyThuat\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.pdb
+E:\Google Drive\DHXD HN\Tuyen sinh\2015\ThiVeMyThuat\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.csprojResolveAssemblyReference.cache
 D:\ThiVeMyThuat\ThiVeMyThuat\bin\Debug\ThiVeMyThuat.exe.config
 D:\ThiVeMyThuat\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.exe
 D:\ThiVeMyThuat\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.pdb
@@ -106,6 +106,7 @@ D:\ThiVeMyThuat\ThiVeMyThuat\bin\Debug\ComponentFactory.Krypton.Navigator.dll
 D:\ThiVeMyThuat\ThiVeMyThuat\bin\Debug\ComponentFactory.Krypton.Ribbon.dll
 D:\ThiVeMyThuat\ThiVeMyThuat\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
 D:\ThiVeMyThuat\ThiVeMyThuat\bin\Debug\ComponentFactory.Krypton.Workspace.dll
+D:\ThiVeMyThuat\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.csprojResolveAssemblyReference.cache
 D:\ThiVeMyThuat\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.FrmDsDinhChinh.resources
 D:\ThiVeMyThuat\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.FrmDsPhongThi.resources
 D:\ThiVeMyThuat\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.FrmDsAnh.resources

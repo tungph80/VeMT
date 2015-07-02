@@ -19,16 +19,21 @@ namespace ThiVeMyThuat
 
         private void reportViewer1_Load(object sender, EventArgs e)
         {
-            Utils.LoadFullScreen(this);
 
-            DsVeMTTableAdapters.vemtTableAdapter da = new DsVeMTTableAdapters.vemtTableAdapter();
-            da.Fill(dsVeMT1.vemt);
-            inlineReportSlot1.RenderDocument();
         }
 
         private void FrmDsThuLePhi_Load(object sender, EventArgs e)
         {
+            Utils.LoadFullScreen(this);
 
+            DsVeMTTableAdapters.vemtTableAdapter da = new DsVeMTTableAdapters.vemtTableAdapter();
+            da.Fill(dsVeMT1.vemt);
+
+            dbVeMTDataContext db = new dbVeMTDataContext();
+            var db_filter = db.vemts.Where(o => o.lephi == null || o.lephi == 0);
+
+            this.reportManager1.DataSources = new PerpetuumSoft.Reporting.Components.ObjectPointerCollection(new string[] {"VeMT"}, new object[] {((object)(db_filter))});
+            inlineReportSlot1.RenderDocument();
         }
     }
 }

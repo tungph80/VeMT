@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="dbVeMT">
+  <DataContextMoniker Name="/dbVeMTDataContext" />
+  <nestedChildShapes>
+    <classShape Id="0c69d732-8740-4aa5-ba08-5b39dcec40f2" absoluteBounds="3.625, 2.5, 2, 5.0400211588541657">
+      <DataClassMoniker Name="/dbVeMTDataContext/vemt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7a085d0e-1893-40a1-b886-847fe904dba4" absoluteBounds="3.64, 2.96, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

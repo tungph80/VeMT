@@ -42,5 +42,15 @@ namespace ThiVeMyThuat.Properties {
                 return ((string)(this["XDAConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=THAONHI-PC\\SQL2014;Initial Catalog=XDA;Integrated Security=True")]
+        public string XDAConnectionString2 {
+            get {
+                return ((string)(this["XDAConnectionString2"]));
+            }
+        }
     }
 }
