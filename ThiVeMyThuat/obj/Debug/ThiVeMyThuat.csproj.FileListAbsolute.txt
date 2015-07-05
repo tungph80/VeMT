@@ -126,7 +126,6 @@ D:\ITsolution\VeMT\VeMT\ThiVeMyThuat\bin\Debug\ComponentFactory.Krypton.Navigato
 D:\ITsolution\VeMT\VeMT\ThiVeMyThuat\bin\Debug\ComponentFactory.Krypton.Ribbon.dll
 D:\ITsolution\VeMT\VeMT\ThiVeMyThuat\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
 D:\ITsolution\VeMT\VeMT\ThiVeMyThuat\bin\Debug\ComponentFactory.Krypton.Workspace.dll
-D:\ITsolution\VeMT\VeMT\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.csprojResolveAssemblyReference.cache
 D:\ITsolution\VeMT\VeMT\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.FrmDsDinhChinh.resources
 D:\ITsolution\VeMT\VeMT\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.FrmDsPhongThi.resources
 D:\ITsolution\VeMT\VeMT\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.FrmDsAnh.resources
@@ -136,3 +135,5 @@ D:\ITsolution\VeMT\VeMT\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.FrmMain.resources
 D:\ITsolution\VeMT\VeMT\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.Properties.Resources.resources
 D:\ITsolution\VeMT\VeMT\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.csproj.GenerateResource.Cache
 D:\ITsolution\VeMT\VeMT\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.exe.licenses
+D:\ITsolution\VeMT\VeMT\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.csprojResolveAssemblyReference.cache
+D:\ITsolution\VeMT\VeMT\ThiVeMyThuat\obj\Debug\ThiVeMyThuat.FrmDonTuiDanhPhach.resources

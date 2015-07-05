@@ -80,7 +80,7 @@ namespace ThiVeMyThuat
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private System.Nullable<double> _stt;
+		private System.Nullable<double> _sohs;
 		
 		private string _hoten;
 		
@@ -124,12 +124,18 @@ namespace ThiVeMyThuat
 		
 		private System.Nullable<double> _lephi;
 		
+		private System.Nullable<double> _tui;
+		
+		private System.Nullable<double> _phach;
+		
+		private System.Nullable<int> _stt;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnsttChanging(System.Nullable<double> value);
-    partial void OnsttChanged();
+    partial void OnsohsChanging(System.Nullable<double> value);
+    partial void OnsohsChanged();
     partial void OnhotenChanging(string value);
     partial void OnhotenChanged();
     partial void OnphaiChanging(System.Nullable<bool> value);
@@ -172,6 +178,12 @@ namespace ThiVeMyThuat
     partial void OnnoicapChanged();
     partial void OnlephiChanging(System.Nullable<double> value);
     partial void OnlephiChanged();
+    partial void OntuiChanging(System.Nullable<double> value);
+    partial void OntuiChanged();
+    partial void OnphachChanging(System.Nullable<double> value);
+    partial void OnphachChanged();
+    partial void OnsttChanging(System.Nullable<int> value);
+    partial void OnsttChanged();
     #endregion
 		
 		public vemt()
@@ -179,22 +191,22 @@ namespace ThiVeMyThuat
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stt", DbType="Float")]
-		public System.Nullable<double> stt
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sohs", DbType="Float")]
+		public System.Nullable<double> sohs
 		{
 			get
 			{
-				return this._stt;
+				return this._sohs;
 			}
 			set
 			{
-				if ((this._stt != value))
+				if ((this._sohs != value))
 				{
-					this.OnsttChanging(value);
+					this.OnsohsChanging(value);
 					this.SendPropertyChanging();
-					this._stt = value;
-					this.SendPropertyChanged("stt");
-					this.OnsttChanged();
+					this._sohs = value;
+					this.SendPropertyChanged("sohs");
+					this.OnsohsChanged();
 				}
 			}
 		}
@@ -615,6 +627,66 @@ namespace ThiVeMyThuat
 					this._lephi = value;
 					this.SendPropertyChanged("lephi");
 					this.OnlephiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tui", DbType="Float")]
+		public System.Nullable<double> tui
+		{
+			get
+			{
+				return this._tui;
+			}
+			set
+			{
+				if ((this._tui != value))
+				{
+					this.OntuiChanging(value);
+					this.SendPropertyChanging();
+					this._tui = value;
+					this.SendPropertyChanged("tui");
+					this.OntuiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phach", DbType="Float")]
+		public System.Nullable<double> phach
+		{
+			get
+			{
+				return this._phach;
+			}
+			set
+			{
+				if ((this._phach != value))
+				{
+					this.OnphachChanging(value);
+					this.SendPropertyChanging();
+					this._phach = value;
+					this.SendPropertyChanged("phach");
+					this.OnphachChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stt", DbType="Int")]
+		public System.Nullable<int> stt
+		{
+			get
+			{
+				return this._stt;
+			}
+			set
+			{
+				if ((this._stt != value))
+				{
+					this.OnsttChanging(value);
+					this.SendPropertyChanging();
+					this._stt = value;
+					this.SendPropertyChanged("stt");
+					this.OnsttChanged();
 				}
 			}
 		}

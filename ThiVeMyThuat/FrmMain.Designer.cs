@@ -32,53 +32,111 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.btnDonTuiBaiThi = new System.Windows.Forms.Button();
+            this.btnInHdDonTuiBT = new System.Windows.Forms.Button();
+            this.btnInHdDanhPhach = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Location = new System.Drawing.Point(12, 159);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(179, 65);
+            this.button1.Size = new System.Drawing.Size(179, 58);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Load Danh sách Ảnh";
+            this.button1.Text = "In Danh sách Ảnh";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 83);
+            this.button2.Location = new System.Drawing.Point(12, 230);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(179, 65);
+            this.button2.Size = new System.Drawing.Size(179, 58);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Load Danh sách Phòng Thi";
+            this.button2.Text = "In Danh sách Phòng Thi";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(12, 154);
+            this.button3.Location = new System.Drawing.Point(12, 301);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(179, 65);
+            this.button3.Size = new System.Drawing.Size(179, 58);
             this.button3.TabIndex = 1;
-            this.button3.Text = "Load Danh sách Đính Chính";
+            this.button3.Text = "In Danh sách Đính Chính";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(12, 225);
+            this.button4.Location = new System.Drawing.Point(12, 372);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(179, 65);
+            this.button4.Size = new System.Drawing.Size(179, 58);
             this.button4.TabIndex = 1;
-            this.button4.Text = "Load Danh sách Thu Lệ Phí";
+            this.button4.Text = "In Danh sách Thu Lệ Phí";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(12, 13);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(179, 59);
+            this.button5.TabIndex = 3;
+            this.button5.Text = "In giấy báo dự thi";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(12, 86);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(177, 63);
+            this.button6.TabIndex = 4;
+            this.button6.Text = "In thẻ dự thi";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // btnDonTuiBaiThi
+            // 
+            this.btnDonTuiBaiThi.Location = new System.Drawing.Point(229, 13);
+            this.btnDonTuiBaiThi.Name = "btnDonTuiBaiThi";
+            this.btnDonTuiBaiThi.Size = new System.Drawing.Size(171, 59);
+            this.btnDonTuiBaiThi.TabIndex = 5;
+            this.btnDonTuiBaiThi.Text = "Dồn túi bài thi và đánh phách";
+            this.btnDonTuiBaiThi.UseVisualStyleBackColor = true;
+            this.btnDonTuiBaiThi.Click += new System.EventHandler(this.btnDonTuiBaiThi_Click);
+            // 
+            // btnInHdDonTuiBT
+            // 
+            this.btnInHdDonTuiBT.Location = new System.Drawing.Point(229, 86);
+            this.btnInHdDonTuiBT.Name = "btnInHdDonTuiBT";
+            this.btnInHdDonTuiBT.Size = new System.Drawing.Size(171, 63);
+            this.btnInHdDonTuiBT.TabIndex = 6;
+            this.btnInHdDonTuiBT.Text = "In hướng dẫn dồn túi bài thi";
+            this.btnInHdDonTuiBT.UseVisualStyleBackColor = true;
+            // 
+            // btnInHdDanhPhach
+            // 
+            this.btnInHdDanhPhach.Location = new System.Drawing.Point(229, 159);
+            this.btnInHdDanhPhach.Name = "btnInHdDanhPhach";
+            this.btnInHdDanhPhach.Size = new System.Drawing.Size(171, 58);
+            this.btnInHdDanhPhach.TabIndex = 7;
+            this.btnInHdDanhPhach.Text = "In hướng dẫn đánh phách";
+            this.btnInHdDanhPhach.UseVisualStyleBackColor = true;
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(350, 375);
+            this.ClientSize = new System.Drawing.Size(719, 515);
+            this.Controls.Add(this.btnInHdDanhPhach);
+            this.Controls.Add(this.btnInHdDonTuiBT);
+            this.Controls.Add(this.btnDonTuiBaiThi);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -97,6 +155,11 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnDonTuiBaiThi;
+        private System.Windows.Forms.Button btnInHdDonTuiBT;
+        private System.Windows.Forms.Button btnInHdDanhPhach;
     }
 }
 

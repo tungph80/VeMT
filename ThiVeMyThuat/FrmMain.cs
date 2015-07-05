@@ -40,5 +40,22 @@ namespace ThiVeMyThuat
             FrmDsThuLePhi f = new FrmDsThuLePhi();
             f.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FrmInTheDuThi FrmTheduthi = new FrmInTheDuThi();
+            FrmTheduthi.Show();
+        }
+
+        private void btnDonTuiBaiThi_Click(object sender, EventArgs e)
+        {
+            FrmDonTuiDanhPhach f = new FrmDonTuiDanhPhach();
+            f.Show();
+        }
     }
 }
