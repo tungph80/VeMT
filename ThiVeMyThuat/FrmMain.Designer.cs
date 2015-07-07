@@ -117,6 +117,7 @@
             this.btnInHdDonTuiBT.TabIndex = 6;
             this.btnInHdDonTuiBT.Text = "In hướng dẫn dồn túi bài thi";
             this.btnInHdDonTuiBT.UseVisualStyleBackColor = true;
+            this.btnInHdDonTuiBT.Click += new System.EventHandler(this.btnInHdDonTuiBT_Click);
             // 
             // btnInHdDanhPhach
             // 
@@ -126,6 +127,7 @@
             this.btnInHdDanhPhach.TabIndex = 7;
             this.btnInHdDanhPhach.Text = "In hướng dẫn đánh phách";
             this.btnInHdDanhPhach.UseVisualStyleBackColor = true;
+            this.btnInHdDanhPhach.Click += new System.EventHandler(this.btnInHdDanhPhach_Click);
             // 
             // FrmMain
             // 

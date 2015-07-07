@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="inlineReportSlot1.DocumentStream" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="utf-16" standalone="yes"?&gt;&lt;root type="PerpetuumSoft.Reporting.DOM.Document" id="1" version="2" ScriptLanguage="CSharp" DocumentGuid="66df67e7-0a6c-4d0a-a5be-9bfc18b3f421" Name="document1" InvalidRenderLength="ThrowException" IsTemplate="true" GridStep="59.055118560791016"&gt;&lt;StyleSheet type="PerpetuumSoft.Reporting.DOM.StyleSheet" id="2"&gt;&lt;Styles type="PerpetuumSoft.Reporting.DOM.StyleCollection" id="3" /&gt;&lt;/StyleSheet&gt;&lt;Parameters type="PerpetuumSoft.Reporting.DOM.ParameterCollection" id="4"&gt;&lt;Item type="PerpetuumSoft.Reporting.DOM.Parameter" id="5" ParameterType="System.Int16" Name="stt" DisplayName="stt" DefaultValue="0" /&gt;&lt;/Parameters&gt;&lt;DataSources type="PerpetuumSoft.Reporting.Data.DocumentDataSourceCollection" id="6" /&gt;&lt;Pages type="PerpetuumSoft.Reporting.DOM.PageCollection" id="7"&gt;&lt;Item type="PerpetuumSoft.Reporting.DOM.Page" id="8" Location="0;0" StyleName="Normal" Margins="118.110236220472; 141.732283464567; 118.110236220472; 118.110236220472" Name="page1" Size="2480.3149606299212;3507.8740157480315"&gt;&lt;Controls type="PerpetuumSoft.Reporting.DOM.ReportControlCollection" id="9"&gt;&lt;Item type="PerpetuumSoft.Reporting.DOM.DataBand" id="10" ColumnsGap="0" Location="0;177.16535949707031" NewColumnAfter="true" ColumnsCount="4" DataSource="VeMT" Name="băngDữLiệu1" Size="2480.3149606299212;1476.3779296875"&gt;&lt;DataBindings type="PerpetuumSoft.Reporting.DOM.ReportDataBindingCollection" id="11" /&gt;&lt;Sort type="PerpetuumSoft.Reporting.DOM.DataBandSortCollection" id="12"&gt;&lt;Item type="PerpetuumSoft.Reporting.DOM.DataBandSort" id="13" Expression="GetData(&amp;quot;VeMT.tui&amp;quot;)" /&gt;&lt;/Sort&gt;&lt;Totals type="PerpetuumSoft.Reporting.DOM.DataBandTotalCollection" id="14" /&gt;&lt;Controls type="PerpetuumSoft.Reporting.DOM.ReportControlCollection" id="15"&gt;&lt;Item type="PerpetuumSoft.Reporting.DOM.GroupBand" id="16" ColumnsGap="0" Location="0;59.055118560791016" ColumnsCount="1" Name="groupBand1" Size="2480.3149606299212;1358.2677001953125" SortExpression="GetData(&amp;quot;VeMT.tui&amp;quot;);&amp;#xD;&amp;#xA;GetData(&amp;quot;VeMT.phongthi&amp;quot;);&amp;#xD;&amp;#xA;GetData(&amp;quot;VeMT.sobaodanh&amp;quot;);" Order="Ascending" GroupExpression="GetData(&amp;quot;VeMT.tui&amp;quot;)"&gt;&lt;DataBindings type="PerpetuumSoft.Reporting.DOM.ReportDataBindingCollection" id="17" /&gt;&lt;Controls type="PerpetuumSoft.Reporting.DOM.ReportControlCollection" id="18"&gt;&lt;Item type="PerpetuumSoft.Reporting.DOM.Header" id="19" StyleName="Header1" Name="header1" Size="2480.3149606299212;118.11023712158203" Location="0;177.16535568237305"&gt;&lt;DataBindings type="PerpetuumSoft.Reporting.DOM.ReportDataBindingCollection" id="20" /&gt;&lt;Controls type="PerpetuumSoft.Reporting.DOM.ReportControlCollection" id="21"&gt;&lt;Item type="PerpetuumSoft.Reporting.DOM.TextBox" id="22" ExportAsPictureInXaml="false" Name="textBox3" Size="118.11023712158203;118.11023712158203" Location="295.27559280395508;0"&gt;&lt;Font type="PerpetuumSoft.Framework.Drawing.FontDescriptor" id="23" FamilyName="Arial" Size="12" Bold="On" /&gt;&lt;TextFormat type="PerpetuumSoft.Framework.Text.TextFormat" id="24" FormatMask="00" FormatStyle="Custom" FormatStringMask="00" UseGroupSeparator="true" UseCultureSettings="true" /&gt;&lt;DataBindings type="PerpetuumSoft.Reporting.DOM.ReportDataBindingCollection" id="25"&gt;&lt;Item type="PerpetuumSoft.Reporting.DOM.ReportDataBinding" id="26" Expression="GetData(&amp;quot;VeMT.tui&amp;quot;)" PropertyName="Value" /&gt;&lt;/DataBindings&gt;&lt;/Item&gt;&lt;Item type="PerpetuumSoft.Reporting.DOM.TextBox" id="27" ExportAsPictureInXaml="false" Name="textBox4" TextAlign="MiddleLeft" Size="177.16535949707031;118.11023712158203" Location="118.11023712158203;0" Text="Túi số:"&gt;&lt;RawValue type="System.String" id="28" value="Túi số:" /&gt;&lt;DataBindings type="PerpetuumSoft.Reporting.DOM.ReportDataBindingCollection" id="29" /&gt;&lt;/Item&gt;&lt;/Controls&gt;&lt;Aggregates type="PerpetuumSoft.Reporting.DOM.AggregateCollection" id="30" /&gt;&lt;/Item&gt;&lt;Item type="PerpetuumSoft.Reporting.DOM.GroupBand" id="31" ColumnsGap="0" Location="0;413.38583374023438" Name="groupBand2" Size="2480.3149606299212;177.16535949707031" SortExpression="GetData(&amp;quot;VeMT.phongthi&amp;quot;)" Order="Ascending" GroupExpression="GetData(&amp;quot;VeMT.phongthi&amp;quot;)"&gt;&lt;DataBindings type="PerpetuumSoft.Reporting.DOM.ReportDataBindingCollection" id="32" /&gt;&lt;Controls type="PerpetuumSoft.Reporting.DOM.ReportControlCollection" id="33"&gt;&lt;Item type="PerpetuumSoft.Reporting.DOM.Detail" id="34" Name="detail2" Size="2480.3149606299212;59.055118560791016" Location="0;59.055118560791016"&gt;&lt;DataBindings type="PerpetuumSoft.Reporting.DOM.ReportDataBindingCollection" id="35" /&gt;&lt;Controls type="PerpetuumSoft.Reporting.DOM.ReportControlCollection" id="36"&gt;&lt;Item type="PerpetuumSoft.Reporting.DOM.TextBox" id="37" ExportAsPictureInXaml="false" Name="textBox6" Size="118.11023712158203;59.055118560791016" Location="206.69291338582679;0"&gt;&lt;Font type="PerpetuumSoft.Framework.Drawing.FontDescriptor" id="38" FamilyName="Arial" /&gt;&lt;DataBindings type="PerpetuumSoft.Reporting.DOM.ReportDataBindingCollection" id="39"&gt;&lt;Item type="PerpetuumSoft.Reporting.DOM.ReportDataBinding" id="40" Expression="GetData(&amp;quot;VeMT.phongthi&amp;quot;)" PropertyName="Value" /&gt;&lt;/DataBindings&gt;&lt;/Item&gt;&lt;Item type="PerpetuumSoft.Reporting.DOM.TextBox" id="41" ExportAsPictureInXaml="false" Name="textBox7" Size="295.27560424804688;59.055118560791016" Location="324.8031496062992;0"&gt;&lt;Font type="PerpetuumSoft.Framework.Drawing.FontDescriptor" id="42" FamilyName="Arial" /&gt;&lt;DataBindings type="PerpetuumSoft.Reporting.DOM.ReportDataBindingCollection" id="43"&gt;&lt;Item type="PerpetuumSoft.Reporting.DOM.ReportDataBinding" id="44" Expression="GetData(&amp;quot;VeMT.sobaodanh&amp;quot;)" PropertyName="Value" /&gt;&lt;/DataBindings&gt;&lt;/Item&gt;&lt;Item type="PerpetuumSoft.Reporting.DOM.TextBox" id="45" ExportAsPictureInXaml="false" Name="textBox8" TextAlign="TopLeft" Size="88.582679748535156;59.055118560791016" Location="118.11023712158203;-0"&gt;&lt;Font type="PerpetuumSoft.Framework.Drawing.FontDescriptor" id="46" FamilyName="Arial" /&gt;&lt;DataBindings type="PerpetuumSoft.Reporting.DOM.ReportDataBindingCollection" id="47"&gt;&lt;Item type="PerpetuumSoft.Reporting.DOM.ReportDataBinding" id="48" Expression="groupBand2.LineNumber;" PropertyName="Value" /&gt;&lt;/DataBindings&gt;&lt;/Item&gt;&lt;/Controls&gt;&lt;Aggregates type="PerpetuumSoft.Reporting.DOM.AggregateCollection" id="49" /&gt;&lt;/Item&gt;&lt;/Controls&gt;&lt;Aggregates type="PerpetuumSoft.Reporting.DOM.AggregateCollection" id="50" /&gt;&lt;/Item&gt;&lt;/Controls&gt;&lt;Aggregates type="PerpetuumSoft.Reporting.DOM.AggregateCollection" id="51" /&gt;&lt;/Item&gt;&lt;/Controls&gt;&lt;Aggregates type="PerpetuumSoft.Reporting.DOM.AggregateCollection" id="52" /&gt;&lt;/Item&gt;&lt;/Controls&gt;&lt;DataBindings type="PerpetuumSoft.Reporting.DOM.ReportDataBindingCollection" id="53" /&gt;&lt;/Item&gt;&lt;/Pages&gt;&lt;PageContent type="PerpetuumSoft.Reporting.DOM.Wrappers.ContentParametersDictionary" id="54" /&gt;&lt;/root&gt;</value>
+  </data>
+  <metadata name="reportManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>503, 17</value>
+  </metadata>
+  <metadata name="dsVeMT1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>644, 17</value>
+  </metadata>
+</root>

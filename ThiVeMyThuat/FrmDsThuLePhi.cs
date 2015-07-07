@@ -26,9 +26,6 @@ namespace ThiVeMyThuat
         {
             Utils.LoadFullScreen(this);
 
-            DsVeMTTableAdapters.vemtTableAdapter da = new DsVeMTTableAdapters.vemtTableAdapter();
-            da.Fill(dsVeMT1.vemt);
-
             dbVeMTDataContext db = new dbVeMTDataContext();
             var db_filter = db.vemts.Where(o => o.lephi == null || o.lephi == 0);
 

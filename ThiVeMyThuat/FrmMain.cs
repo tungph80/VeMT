@@ -57,5 +57,16 @@ namespace ThiVeMyThuat
             FrmDonTuiDanhPhach f = new FrmDonTuiDanhPhach();
             f.Show();
         }
+
+        private void btnInHdDonTuiBT_Click(object sender, EventArgs e)
+        {
+            FrmDonTuiBaiThi f = new FrmDonTuiBaiThi();
+            f.Show();
+        }
+
+        private void btnInHdDanhPhach_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
