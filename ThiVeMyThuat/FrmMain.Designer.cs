@@ -37,6 +37,7 @@
             this.btnDonTuiBaiThi = new System.Windows.Forms.Button();
             this.btnInHdDonTuiBT = new System.Windows.Forms.Button();
             this.btnInHdDanhPhach = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -129,6 +130,16 @@
             this.btnInHdDanhPhach.UseVisualStyleBackColor = true;
             this.btnInHdDanhPhach.Click += new System.EventHandler(this.btnInHdDanhPhach_Click);
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(432, 13);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(171, 59);
+            this.button7.TabIndex = 5;
+            this.button7.Text = "Dồn túi bài thi và đánh phách Random - DuongNH";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -136,6 +147,7 @@
             this.ClientSize = new System.Drawing.Size(719, 515);
             this.Controls.Add(this.btnInHdDanhPhach);
             this.Controls.Add(this.btnInHdDonTuiBT);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.btnDonTuiBaiThi);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -162,6 +174,7 @@
         private System.Windows.Forms.Button btnDonTuiBaiThi;
         private System.Windows.Forms.Button btnInHdDonTuiBT;
         private System.Windows.Forms.Button btnInHdDanhPhach;
+        private System.Windows.Forms.Button button7;
     }
 }
 
