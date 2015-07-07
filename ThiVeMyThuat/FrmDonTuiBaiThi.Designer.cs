@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDonTuiBaiThi));
             this.reportViewer1 = new PerpetuumSoft.Reporting.View.ReportViewer();
-            this.inlineReportSlot1 = new PerpetuumSoft.Reporting.Components.InlineReportSlot(this.components);
-            this.reportManager1 = new PerpetuumSoft.Reporting.Components.ReportManager(this.components);
             this.dsVeMT1 = new ThiVeMyThuat.DsVeMT();
+            this.reportManager1 = new PerpetuumSoft.Reporting.Components.ReportManager(this.components);
+            this.inlineReportSlot1 = new PerpetuumSoft.Reporting.Components.InlineReportSlot(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dsVeMT1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,11 +50,10 @@
             this.reportViewer1.TabIndex = 2;
             this.reportViewer1.ViewMode = PerpetuumSoft.Reporting.View.ViewMode.ContinuedPage;
             // 
-            // inlineReportSlot1
+            // dsVeMT1
             // 
-            this.inlineReportSlot1.DocumentStream = resources.GetString("inlineReportSlot1.DocumentStream");
-            this.inlineReportSlot1.ReportName = "HDDonTuiBaiThi";
-            this.inlineReportSlot1.ReportScriptType = typeof(PerpetuumSoft.Reporting.Rendering.ReportScriptBase);
+            this.dsVeMT1.DataSetName = "DsVeMT";
+            this.dsVeMT1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportManager1
             // 
@@ -65,10 +64,11 @@
             this.reportManager1.Reports.AddRange(new PerpetuumSoft.Reporting.Components.ReportSlot[] {
             this.inlineReportSlot1});
             // 
-            // dsVeMT1
+            // inlineReportSlot1
             // 
-            this.dsVeMT1.DataSetName = "DsVeMT";
-            this.dsVeMT1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.inlineReportSlot1.DocumentStream = resources.GetString("inlineReportSlot1.DocumentStream");
+            this.inlineReportSlot1.ReportName = "HDDonTuiBaiThi";
+            this.inlineReportSlot1.ReportScriptType = typeof(PerpetuumSoft.Reporting.Rendering.ReportScriptBase);
             // 
             // FrmDonTuiBaiThi
             // 
@@ -87,8 +87,8 @@
         #endregion
 
         private PerpetuumSoft.Reporting.View.ReportViewer reportViewer1;
-        private PerpetuumSoft.Reporting.Components.InlineReportSlot inlineReportSlot1;
-        private PerpetuumSoft.Reporting.Components.ReportManager reportManager1;
         private DsVeMT dsVeMT1;
+        private PerpetuumSoft.Reporting.Components.ReportManager reportManager1;
+        private PerpetuumSoft.Reporting.Components.InlineReportSlot inlineReportSlot1;
     }
 }
