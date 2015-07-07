@@ -32,12 +32,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(52, 106);
+            this.button1.Location = new System.Drawing.Point(16, 108);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 33);
             this.button1.TabIndex = 0;
@@ -56,7 +57,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(166, 108);
+            this.button2.Location = new System.Drawing.Point(198, 112);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(84, 29);
             this.button2.TabIndex = 2;
@@ -86,11 +87,20 @@
             0,
             0});
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(16, 74);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(266, 23);
+            this.progressBar1.Step = 1;
+            this.progressBar1.TabIndex = 4;
+            // 
             // FrmDonTuiDanhPhach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(326, 151);
+            this.ClientSize = new System.Drawing.Size(299, 151);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
@@ -99,6 +109,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmDonTuiDanhPhach";
             this.Text = "Don tui va danh phach";
+            this.Load += new System.EventHandler(this.FrmDonTuiDanhPhach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -111,5 +122,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
