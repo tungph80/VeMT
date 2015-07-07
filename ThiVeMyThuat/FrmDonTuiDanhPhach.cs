@@ -21,32 +21,54 @@ namespace ThiVeMyThuat
         {
             try
             {
-
                 //sap xep theo phong thi
                 dbVeMTDataContext db = new dbVeMTDataContext();
-                var list = db.vemts.OrderBy(a => a.phongthi);
+                var qry = db.vemts.OrderBy(a => a.phongthi);
+                List<vemt> list = new List<vemt>();
+                list = qry.ToList();
                 //danh stt
-                int n = list.ToList().Count;
+                int n = list.Count;
                 for (int i = 0; i < n; i++)
                 {
-                    list.ToList()[i].stt = i + 1;
+                    list[i].stt = i + 1;
                 }
                 
                 //don tui bai thi
                 for (int i = 0; i < n; i++)
                 {
-                    decimal? stt = list.ToList()[i].stt;
-                    list.ToList()[i].tui = Convert.ToDouble((int)((stt - 1) / numericUpDown1.Value)) + 1;
+                    decimal? stt = list[i].stt;
+                    list[i].tui = Convert.ToDouble((int)((stt - 1) / numericUpDown1.Value)) + 1;
                 }
-                //var x = list.GroupBy(p => p.tui);
-                //foreach (vemt item in x)
-                //{
-                //    item.phach = item.tui * 10;
-                //}
 
                 //danh phach theo tung tui, cac phach trong mot tui la lien tuc
                 //phac giua cac tui cach nhau la 1 so nguyen tu 1 den 10
+                //sinh ra so ngau nhien
+                Random rd = new Random(345);
+                int rn = rd.Next(1, 10);
+                //lay ra danh sach cac tui
+                var qryDstui = from x in db.vemts
+                               select x.tui;
+                List<double?> dstui = new List<double?>();
+                dstui = qryDstui.ToList();
 
+                //duyet tung tui bai thi
+                foreach (float item in dstui)
+                {
+                    List<vemt> dsSbd = new List<vemt>();
+                    //lay ra ca bai thi trong 1 tui
+                    dsSbd = (from x in db.vemts
+                                where x.tui==item
+                                select x).ToList();
+                    //duyet tung bai thi va danh phach cho bai thi
+                    for (int i = 0; i < dsSbd.Count; i++)
+                    {
+                        rn = rn + 1;
+                        dsSbd[i].phach = rn;//so phach la tang lien tuc
+                        
+                    }
+                    //tui tiep theo co so phach bat dau bang so phach tui cu  + 1 so ngau nhien
+                    rn = rn + new Random().Next(1,10);  
+                }
                 db.SubmitChanges();
                 MessageBox.Show("Đã thực hiện xong");
             }
