@@ -37,6 +37,8 @@
     <Reference Include="ComponentFactory.Krypton.Ribbon, Version=7.1.1.18, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e" />
     <Reference Include="ComponentFactory.Krypton.Toolkit, Version=7.1.1.18, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e" />
     <Reference Include="ComponentFactory.Krypton.Workspace, Version=7.1.1.18, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PerpetuumSoft.Charts, Version=7.1.1.18, Culture=neutral, PublicKeyToken=8a6ae0a3e67829b5" />
     <Reference Include="PerpetuumSoft.Framework, Version=7.1.1.18, Culture=neutral, PublicKeyToken=8a6ae0a3e67829b5" />
@@ -49,6 +51,7 @@
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -103,6 +106,12 @@
     <Compile Include="FrmDsThuLePhi.Designer.cs">
       <DependentUpon>FrmDsThuLePhi.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmInHdDonTuiBaiThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInHdDonTuiBaiThi.Designer.cs">
+      <DependentUpon>FrmInHdDonTuiBaiThi.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInTheDuThi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDsThuLePhi.resx">
       <DependentUpon>FrmDsThuLePhi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInHdDonTuiBaiThi.resx">
+      <DependentUpon>FrmInHdDonTuiBaiThi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInTheDuThi.resx">
       <DependentUpon>FrmInTheDuThi.cs</DependentUpon>
