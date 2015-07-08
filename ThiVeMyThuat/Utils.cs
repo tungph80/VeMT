@@ -26,13 +26,15 @@ namespace ThiVeMyThuat
         public static List<CTui> lst_tui = new List<CTui>();
         //khởi tạo biến đếm số túi bài thi
         public static int sotuibaithi { get; set; }
+        //khởi tạo biến chứa số bài thi / túi
+        public static int sobaithi_theotui { get; set; }
 
         public static void LoadFullScreen(Form f)
         {
             f.WindowState = FormWindowState.Maximized;
         }
 
-        public static void TronTuiBaiThi(int sobaithi_theotui)
+        public static void TronTuiBaiThi()
         {
             #region chặt nhỏ dữ liệu chia ra thành các phòng thi khác nhau
 
@@ -72,7 +74,7 @@ namespace ThiVeMyThuat
             #region thực hiện trộn túi bài thi
 
             //tính số bài thi để chia đoạn phòng thi
-            int chiadoan = sobaithi_theotui / 3 + 1;
+            int chiadoan = sobaithi_theotui * 2 / 3 + 1;
             //tính có bao nhiêu túi bài thi cần trộn
             sotuibaithi = ((int)db.vemts.Count() / sobaithi_theotui) + 1;
 
@@ -116,7 +118,7 @@ namespace ThiVeMyThuat
                             }
 
                             //update số bài thi còn
-                            Update_sobaithi_con(tui, pt, sobaithi_theotui);
+                            Update_sobaithi_con(tui, pt);
                         }
                         else
                         {
@@ -134,30 +136,30 @@ namespace ThiVeMyThuat
                                 //----------------------------------------------------------------
 
                                 //S: kiểm tra số phòng thi còn trong lst_phongthi >2 hay không
-                                if (lst_phongthi.Count() > 2)
-                                {
-                                    //Đ: kiểm tra số lượng bài thi còn dư lại nếu lấy = số bài thi cần thêm vào túi
-                                    int sobaithi_con_saukhi_laydu_theotui = pt.sobaithi_con_theophong - tui.sobaithi_con_theotui;
-                                    if (sobaithi_con_saukhi_laydu_theotui > 3)
-                                    {
-                                        //Đ: Lấy = số bài thi cần thêm vào túi.
-                                        Move_record_from_pt_to_tui(tui, pt, tui.sobaithi_con_theotui);
-                                    }
-                                }
-                                else
-                                {
+                                //if (lst_phongthi.Count() > 2)
+                                //{
+                                //    //Đ: kiểm tra số lượng bài thi còn dư lại nếu lấy = số bài thi cần thêm vào túi
+                                //    int sobaithi_con_saukhi_laydu_theotui = pt.sobaithi_con_theophong - tui.sobaithi_con_theotui;
+                                //    if (sobaithi_con_saukhi_laydu_theotui > 3)
+                                //    {
+                                //        //Đ: Lấy = số bài thi cần thêm vào túi.
+                                //        Move_record_from_pt_to_tui(tui, pt, tui.sobaithi_con_theotui);
+                                //    }
+                                //}
+                                //else
+                                //{
                                     //------------------------------------------------------------------------
                                 #endregion
                                     /********************************************************/
                                     //S: Lấy = số bài thi cần thêm vào túi.
                                     Move_record_from_pt_to_tui(tui, pt, tui.sobaithi_con_theotui);
-                                }
+                                //}
 
 
                             }
 
                             //update số bài thi còn
-                            Update_sobaithi_con(tui, pt, sobaithi_theotui);
+                            Update_sobaithi_con(tui, pt);
                         }
                     }
                     else
@@ -186,7 +188,7 @@ namespace ThiVeMyThuat
 
         }
 
-        private static void Update_sobaithi_con(CTui tui, CPhongThi pt, int sobaithi_theotui)
+        private static void Update_sobaithi_con(CTui tui, CPhongThi pt)
         {
             //update lại số bài thi trong túi
             tui.sobaithi_con_theotui = sobaithi_theotui - tui.Lst_baithi_theotui.Count();
@@ -209,8 +211,12 @@ namespace ThiVeMyThuat
             {
                 for (int j = 0; j < lst_tui[i].Lst_baithi_theotui.Count(); j++)
                 {
+                    //gán mã túi
                     lst_tui[i].Lst_baithi_theotui[j].tui = i + 1;
+                    //gán số thứ tự theo từng túi
                     lst_tui[i].Lst_baithi_theotui[j].stttui = j + 1;
+                    //gán số phách cho từng bài thi
+                    lst_tui[i].Lst_baithi_theotui[j].phach = i * sobaithi_theotui + j + 1;
                 }
             }
         }

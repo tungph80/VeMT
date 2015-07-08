@@ -29,13 +29,13 @@ namespace ThiVeMyThuat
         private void button1_Click(object sender, EventArgs e)
         {
             index_of_lst_tui += 1;
-            if (index_of_lst_tui > Utils.lst_tui.Count()-1 )
+            if (index_of_lst_tui > Utils.sotuibaithi -1 )
             {
-                index_of_lst_tui = Utils.lst_tui.Count()-1;
+                index_of_lst_tui = Utils.sotuibaithi -1;
             }
 
-            dataGridView1.DataSource = Utils.lst_tui[index_of_lst_tui].Lst_baithi_theotui;
-            textBox1.Text = (index_of_lst_tui + 1).ToString();
+            //dataGridView1.DataSource = Utils.lst_tui[index_of_lst_tui].Lst_baithi_theotui;
+            index_page.Value = index_of_lst_tui + 1;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -46,18 +46,20 @@ namespace ThiVeMyThuat
                 index_of_lst_tui = 0;
             }
 
-            dataGridView1.DataSource = Utils.lst_tui[index_of_lst_tui].Lst_baithi_theotui;
-            textBox1.Text = (index_of_lst_tui + 1).ToString();
+            //dataGridView1.DataSource = Utils.lst_tui[index_of_lst_tui].Lst_baithi_theotui;
+            index_page.Value = index_of_lst_tui + 1;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             try
             {
-                int sobaithi_theotui = int.Parse(txt_sobaithi_theotui.Text);
-                Utils.TronTuiBaiThi(sobaithi_theotui);
-                dataGridView1.DataSource = Utils.lst_tui[index_of_lst_tui].Lst_baithi_theotui;
-                textBox1.Text = (index_of_lst_tui+1).ToString();
+                Utils.sobaithi_theotui = int.Parse(txt_sobaithi_theotui.Text);                
+                Utils.TronTuiBaiThi();
+                index_page.Minimum = 1;
+                index_page.Maximum = Utils.sotuibaithi;
+                //dataGridView1.DataSource = Utils.lst_tui[index_of_lst_tui].Lst_baithi_theotui;
+                index_page.Value = index_of_lst_tui + 1;
                 txt_tongtuibaithi.Text = Utils.sotuibaithi.ToString();
             }
             catch (Exception ex)
@@ -65,7 +67,31 @@ namespace ThiVeMyThuat
                 MessageBox.Show(ex.ToString());
             }
             
+        }        
+
+        private void txt_index_page_ValueChanged(object sender, EventArgs e)
+        {
+            if (Utils.sotuibaithi > 0 )
+            {
+                index_of_lst_tui = (int)index_page.Value - 1;
+                if (index_of_lst_tui < 0)
+                {
+                    index_of_lst_tui = 0;
+                }
+                else
+                {
+                    if (index_of_lst_tui > Utils.sotuibaithi - 1)
+                    {
+                        index_of_lst_tui = Utils.sotuibaithi - 1;
+                    }
+                }
+
+                dataGridView1.DataSource = Utils.lst_tui[index_of_lst_tui].Lst_baithi_theotui;
+            }
+            
         }
+
+        
 
 
     }
