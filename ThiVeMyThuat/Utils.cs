@@ -78,18 +78,21 @@ namespace ThiVeMyThuat
             //tính có bao nhiêu túi bài thi cần trộn
             sotuibaithi = ((int)db.vemts.Count() / sobaithi_theotui) + 1;
 
+            //khởi tạo đối tượng để random phòng thi cho mỗi lần lấy bài thi vào túi
+            Random r = new Random();
+            int k = r.Next(0, lst_phongthi.Count - 1);
+
             for (int i = 0; i < sotuibaithi; i++)
             {
-                //khởi tạo đối tượng để random phòng thi cho mỗi lần lấy bài thi vào túi
-                Random r = new Random();
-
                 //khởi tạo 1 túi bài thi
                 CTui tui = new CTui();
                 tui.sobaithi_con_theotui = sobaithi_theotui;
                 while (tui.sobaithi_con_theotui > 0 && lst_phongthi.Count() > 0)
                 {
-
-                    int k = r.Next(0, lst_phongthi.Count - 1);
+                    if (k > lst_phongthi.Count() -1 )
+                    {
+                        k = 0;
+                    }
                     //MessageBox.Show(ar[index].ToString());
 
                     ////lấy random phòng thi tại đây. Ở đây chưa random nên lấy tuần tự
@@ -102,19 +105,20 @@ namespace ThiVeMyThuat
                     pt.sobaithi_con_theophong = pt.Lst_baithi_theophong.Count();
                     if (pt.sobaithi_con_theophong > 0)
                     {
-                        //nếu còn bài thi trong phòng thì kiểm tra xem nó có > 13 k?
+                        //nếu còn bài thi trong phòng thì kiểm tra xem nó có > phandoan k?
                         if (pt.sobaithi_con_theophong > chiadoan)
                         {
-                            //Đ: kiểm tra số bài thi trong túi cần lấy thêm có > 13 k?
+                            //Đ: kiểm tra số bài thi trong túi cần lấy thêm có > phandoan k?
                             if (tui.sobaithi_con_theotui > chiadoan)
                             {
-                                //Đ: lấy tuần tự 13 bài từ phòng thi ném vào trong túi hiện tại
+                                //Đ: lấy tuần tự số <phandoan> bài từ phòng thi ném vào trong túi hiện tại
                                 Move_record_from_pt_to_tui(tui, pt, chiadoan);
                             }
                             else
                             {
                                 //S: lấy toàn bộ số bài thi còn trong phòng ném vào trong túi.
                                 Move_record_from_pt_to_tui(tui, pt, tui.sobaithi_con_theotui);
+                                //k = k + 1;
                             }
 
                             //update số bài thi còn
@@ -127,6 +131,7 @@ namespace ThiVeMyThuat
                             {
                                 //Đ: lấy hết số bài thi còn trong phòng
                                 Move_record_from_pt_to_tui(tui, pt, pt.sobaithi_con_theophong);
+                                //k = k + 1;
 
                             }
                             else
@@ -165,7 +170,7 @@ namespace ThiVeMyThuat
                     else
                     {
                         //nếu phòng thi này k còn bài thi nào -> loại ra khỏi list_phongthi
-                        lst_phongthi.Remove(pt);
+                        lst_phongthi.Remove(pt);                        
                     }
 
                     //nếu đã lấy đủ số bài thi cho túi thì break loop.
