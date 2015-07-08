@@ -109,6 +109,7 @@
             this.btnDonTuiBaiThi.TabIndex = 5;
             this.btnDonTuiBaiThi.Text = "Dồn túi bài thi và đánh phách";
             this.btnDonTuiBaiThi.UseVisualStyleBackColor = true;
+            this.btnDonTuiBaiThi.Visible = false;
             this.btnDonTuiBaiThi.Click += new System.EventHandler(this.btnDonTuiBaiThi_Click);
             // 
             // btnInHdDonTuiBT

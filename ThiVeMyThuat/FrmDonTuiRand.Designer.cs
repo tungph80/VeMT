@@ -39,6 +39,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.index_page = new System.Windows.Forms.NumericUpDown();
             this.btn_Update_DB = new System.Windows.Forms.Button();
+            this.btn_backup = new System.Windows.Forms.Button();
+            this.btn_restore = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.index_page)).BeginInit();
             this.SuspendLayout();
@@ -52,13 +54,13 @@
             this.dataGridView1.Location = new System.Drawing.Point(4, 56);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(762, 421);
+            this.dataGridView1.Size = new System.Drawing.Size(969, 421);
             this.dataGridView1.TabIndex = 0;
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(624, 489);
+            this.button1.Location = new System.Drawing.Point(831, 489);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(142, 34);
@@ -70,7 +72,7 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(474, 489);
+            this.button2.Location = new System.Drawing.Point(681, 489);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(142, 34);
@@ -159,13 +161,35 @@
             this.btn_Update_DB.UseVisualStyleBackColor = true;
             this.btn_Update_DB.Click += new System.EventHandler(this.btn_Update_DB_Click);
             // 
+            // btn_backup
+            // 
+            this.btn_backup.Location = new System.Drawing.Point(633, 1);
+            this.btn_backup.Name = "btn_backup";
+            this.btn_backup.Size = new System.Drawing.Size(155, 45);
+            this.btn_backup.TabIndex = 6;
+            this.btn_backup.Text = "Tạo bản sao dữ liệu";
+            this.btn_backup.UseVisualStyleBackColor = true;
+            this.btn_backup.Click += new System.EventHandler(this.btn_backup_Click);
+            // 
+            // btn_restore
+            // 
+            this.btn_restore.Location = new System.Drawing.Point(794, 1);
+            this.btn_restore.Name = "btn_restore";
+            this.btn_restore.Size = new System.Drawing.Size(132, 45);
+            this.btn_restore.TabIndex = 6;
+            this.btn_restore.Text = "Khôi phục dữ liệu";
+            this.btn_restore.UseVisualStyleBackColor = true;
+            this.btn_restore.Click += new System.EventHandler(this.btn_restore_Click);
+            // 
             // FrmDonTuiRand
             // 
-            this.AcceptButton = this.btn_tron;
+            this.AcceptButton = this.btn_Update_DB;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(773, 540);
+            this.ClientSize = new System.Drawing.Size(980, 540);
             this.Controls.Add(this.index_page);
+            this.Controls.Add(this.btn_restore);
+            this.Controls.Add(this.btn_backup);
             this.Controls.Add(this.btn_Update_DB);
             this.Controls.Add(this.btn_tron);
             this.Controls.Add(this.txt_sobaithi_theotui);
@@ -201,5 +225,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown index_page;
         private System.Windows.Forms.Button btn_Update_DB;
+        private System.Windows.Forms.Button btn_backup;
+        private System.Windows.Forms.Button btn_restore;
     }
 }
