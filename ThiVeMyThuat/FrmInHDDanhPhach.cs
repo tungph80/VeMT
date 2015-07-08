@@ -10,20 +10,20 @@ using System.Windows.Forms;
 
 namespace ThiVeMyThuat
 {
-    public partial class FrmDonTuiBaiThi : Form
+    public partial class FrmInHDDanhPhach : Form
     {
-        public FrmDonTuiBaiThi()
+        public FrmInHDDanhPhach()
         {
             InitializeComponent();
         }
 
-        private void FrmDonTuiBaiThi_Load(object sender, EventArgs e)
+        private void FrmInHDDanhPhach_Load(object sender, EventArgs e)
         {
             Utils.LoadFullScreen(this);
 
             DsVeMTTableAdapters.vemtTableAdapter da = new DsVeMTTableAdapters.vemtTableAdapter();
             da.Fill(dsVeMT1.vemt);
-            
+
 
             //dbVeMTDataContext db = new dbVeMTDataContext();
             //var db_filter = db.vemts.OrderBy(o => o.sobaodanh).OrderBy(o => o.phongthi).OrderBy(o => o.tui);

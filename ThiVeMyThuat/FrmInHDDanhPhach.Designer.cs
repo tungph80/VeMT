@@ -1,6 +1,6 @@
 ﻿namespace ThiVeMyThuat
 {
-    partial class FrmDonTuiBaiThi
+    partial class FrmInHDDanhPhach
     {
         /// <summary>
         /// Required designer variable.
@@ -29,32 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDonTuiBaiThi));
-            this.reportViewer1 = new PerpetuumSoft.Reporting.View.ReportViewer();
-            this.inlineReportSlot1 = new PerpetuumSoft.Reporting.Components.InlineReportSlot(this.components);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInHDDanhPhach));
             this.reportManager1 = new PerpetuumSoft.Reporting.Components.ReportManager(this.components);
             this.dsVeMT1 = new ThiVeMyThuat.DsVeMT();
+            this.inlineReportSlot1 = new PerpetuumSoft.Reporting.Components.InlineReportSlot(this.components);
+            this.reportViewer1 = new PerpetuumSoft.Reporting.View.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.dsVeMT1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.PageIndex = 0;
-            this.reportViewer1.Size = new System.Drawing.Size(542, 335);
-            this.reportViewer1.Source = this.inlineReportSlot1;
-            this.reportViewer1.SplashForm = null;
-            this.reportViewer1.TabIndex = 2;
-            this.reportViewer1.ViewMode = PerpetuumSoft.Reporting.View.ViewMode.ContinuedPage;
-            // 
-            // inlineReportSlot1
-            // 
-            this.inlineReportSlot1.DocumentStream = resources.GetString("inlineReportSlot1.DocumentStream");
-            this.inlineReportSlot1.ReportName = "HDDonTuiBaiThi";
-            this.inlineReportSlot1.ReportScriptType = typeof(PerpetuumSoft.Reporting.Rendering.ReportScriptBase);
             // 
             // reportManager1
             // 
@@ -70,15 +51,34 @@
             this.dsVeMT1.DataSetName = "DsVeMT";
             this.dsVeMT1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // FrmDonTuiBaiThi
+            // inlineReportSlot1
+            // 
+            this.inlineReportSlot1.DocumentStream = resources.GetString("inlineReportSlot1.DocumentStream");
+            this.inlineReportSlot1.ReportName = "HDDonTuiBaiThi";
+            this.inlineReportSlot1.ReportScriptType = typeof(PerpetuumSoft.Reporting.Rendering.ReportScriptBase);
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.PageIndex = 0;
+            this.reportViewer1.Size = new System.Drawing.Size(686, 394);
+            this.reportViewer1.Source = this.inlineReportSlot1;
+            this.reportViewer1.SplashForm = null;
+            this.reportViewer1.TabIndex = 3;
+            this.reportViewer1.ViewMode = PerpetuumSoft.Reporting.View.ViewMode.ContinuedPage;
+            // 
+            // FrmInHDDanhPhach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(542, 335);
+            this.ClientSize = new System.Drawing.Size(686, 394);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "FrmDonTuiBaiThi";
-            this.Text = "FrmDonTuiBaiThi";
-            this.Load += new System.EventHandler(this.FrmDonTuiBaiThi_Load);
+            this.Name = "FrmInHDDanhPhach";
+            this.Text = "FrmInHDDanhPhach";
+            this.Load += new System.EventHandler(this.FrmInHDDanhPhach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsVeMT1)).EndInit();
             this.ResumeLayout(false);
 
@@ -86,9 +86,9 @@
 
         #endregion
 
-        private PerpetuumSoft.Reporting.View.ReportViewer reportViewer1;
-        private DsVeMT dsVeMT1;
         private PerpetuumSoft.Reporting.Components.ReportManager reportManager1;
+        private DsVeMT dsVeMT1;
+        private PerpetuumSoft.Reporting.View.ReportViewer reportViewer1;
         private PerpetuumSoft.Reporting.Components.InlineReportSlot inlineReportSlot1;
     }
 }

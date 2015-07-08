@@ -67,11 +67,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbVeMT.dbml</DependentUpon>
     </Compile>
-    <Compile Include="FrmDonTuiBaiThi.cs">
+    <Compile Include="FrmInHDDanhPhach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDonTuiBaiThi.Designer.cs">
-      <DependentUpon>FrmDonTuiBaiThi.cs</DependentUpon>
+    <Compile Include="FrmInHDDanhPhach.Designer.cs">
+      <DependentUpon>FrmInHDDanhPhach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInHDDonTuiBaiThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInHDDonTuiBaiThi.Designer.cs">
+      <DependentUpon>FrmInHDDonTuiBaiThi.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmDonTuiDanhPhach.cs">
       <SubType>Form</SubType>
@@ -118,12 +124,6 @@
     <Compile Include="FrmDsThuLePhi.Designer.cs">
       <DependentUpon>FrmDsThuLePhi.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmInHdDonTuiBaiThi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmInHdDonTuiBaiThi.Designer.cs">
-      <DependentUpon>FrmInHdDonTuiBaiThi.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmInTheDuThi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,8 +142,11 @@
     <None Include="dbVeMT.dbml.layout">
       <DependentUpon>dbVeMT.dbml</DependentUpon>
     </None>
-    <EmbeddedResource Include="FrmDonTuiBaiThi.resx">
-      <DependentUpon>FrmDonTuiBaiThi.cs</DependentUpon>
+    <EmbeddedResource Include="FrmInHDDanhPhach.resx">
+      <DependentUpon>FrmInHDDanhPhach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInHDDonTuiBaiThi.resx">
+      <DependentUpon>FrmInHDDonTuiBaiThi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDonTuiDanhPhach.resx">
       <DependentUpon>FrmDonTuiDanhPhach.cs</DependentUpon>
@@ -163,9 +166,6 @@
     <EmbeddedResource Include="FrmDsThuLePhi.resx">
       <DependentUpon>FrmDsThuLePhi.cs</DependentUpon>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmInHdDonTuiBaiThi.resx">
-      <DependentUpon>FrmInHdDonTuiBaiThi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInTheDuThi.resx">
       <DependentUpon>FrmInTheDuThi.cs</DependentUpon>

@@ -60,13 +60,14 @@ namespace ThiVeMyThuat
 
         private void btnInHdDonTuiBT_Click(object sender, EventArgs e)
         {
-            FrmDonTuiBaiThi f = new FrmDonTuiBaiThi();
+            FrmInHDDonTuiBaiThi f = new FrmInHDDonTuiBaiThi();
             f.Show();
         }
 
         private void btnInHdDanhPhach_Click(object sender, EventArgs e)
         {
-
+            FrmInHDDanhPhach f = new FrmInHDDanhPhach();
+            f.Show();
         }
 
         private void button7_Click(object sender, EventArgs e)
