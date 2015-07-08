@@ -37,6 +37,8 @@
     <Reference Include="ComponentFactory.Krypton.Ribbon, Version=7.1.1.18, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e" />
     <Reference Include="ComponentFactory.Krypton.Toolkit, Version=7.1.1.18, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e" />
     <Reference Include="ComponentFactory.Krypton.Workspace, Version=7.1.1.18, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e" />
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="itextsharp, Version=4.1.6.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic" />
@@ -45,6 +47,10 @@
     <Reference Include="PerpetuumSoft.Framework.Model, Version=7.1.1.18, Culture=neutral, PublicKeyToken=8a6ae0a3e67829b5" />
     <Reference Include="PerpetuumSoft.Instrumentation, Version=7.1.1.18, Culture=neutral, PublicKeyToken=8a6ae0a3e67829b5" />
     <Reference Include="PerpetuumSoft.Reporting, Version=7.1.1.18, Culture=neutral, PublicKeyToken=8a6ae0a3e67829b5, processorArchitecture=MSIL" />
+    <Reference Include="PerpetuumSoft.Reporting.Export.ExcelXml, Version=7.1.1.18, Culture=neutral, PublicKeyToken=8a6ae0a3e67829b5, processorArchitecture=MSIL" />
+    <Reference Include="PerpetuumSoft.Reporting.Export.OpenXML, Version=7.1.1.18, Culture=neutral, PublicKeyToken=8a6ae0a3e67829b5, processorArchitecture=MSIL" />
+    <Reference Include="PerpetuumSoft.Reporting.Export.Pdf, Version=7.1.1.18, Culture=neutral, PublicKeyToken=8a6ae0a3e67829b5, processorArchitecture=MSIL" />
+    <Reference Include="PerpetuumSoft.Writers.Pdf, Version=7.1.1.18, Culture=neutral, PublicKeyToken=8a6ae0a3e67829b5" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -130,6 +136,12 @@
     <Compile Include="FrmInTheDuThi.Designer.cs">
       <DependentUpon>FrmInTheDuThi.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmInThongTinTuiPhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInThongTinTuiPhach.Designer.cs">
+      <DependentUpon>FrmInThongTinTuiPhach.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInTheDuThi.resx">
       <DependentUpon>FrmInTheDuThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInThongTinTuiPhach.resx">
+      <DependentUpon>FrmInThongTinTuiPhach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>

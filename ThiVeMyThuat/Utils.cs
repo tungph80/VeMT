@@ -34,6 +34,8 @@ namespace ThiVeMyThuat
             f.WindowState = FormWindowState.Maximized;
         }
 
+        
+
         public static void TronTuiBaiThi()
         {
             #region chặt nhỏ dữ liệu chia ra thành các phòng thi khác nhau
@@ -46,7 +48,7 @@ namespace ThiVeMyThuat
             dbVeMTDataContext db = new dbVeMTDataContext();
             //var db_sort = db.vemts.OrderBy(o => o.sobaodanh).OrderBy(o => o.phongthi);            
 
-            int sophongthi = 30; //sau này cần lấy động số phòng thi.
+            int sophongthi = db.vemts.Select(o => o.phongthi).Distinct().Count(); //  30; //sau này cần lấy động số phòng thi.
 
             //loop so phong thi để chuẩn bị dữ liệu theo từng phòng thi
             for (int i = 0; i < sophongthi; i++)

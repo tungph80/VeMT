@@ -75,5 +75,11 @@ namespace ThiVeMyThuat
             FrmDonTuiRand f = new FrmDonTuiRand();
             f.Show();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            FrmInThongTinTuiPhach f = new FrmInThongTinTuiPhach();
+            f.Show();
+        }
     }
 }

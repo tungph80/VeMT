@@ -30,10 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInHDDanhPhach));
+            PerpetuumSoft.Reporting.Export.ExtraParameters extraParameters1 = new PerpetuumSoft.Reporting.Export.ExtraParameters();
             this.reportManager1 = new PerpetuumSoft.Reporting.Components.ReportManager(this.components);
             this.dsVeMT1 = new ThiVeMyThuat.DsVeMT();
             this.inlineReportSlot1 = new PerpetuumSoft.Reporting.Components.InlineReportSlot(this.components);
             this.reportViewer1 = new PerpetuumSoft.Reporting.View.ReportViewer();
+            this.pdfExportFilter1 = new PerpetuumSoft.Reporting.Export.Pdf.PdfExportFilter(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dsVeMT1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +56,7 @@
             // inlineReportSlot1
             // 
             this.inlineReportSlot1.DocumentStream = resources.GetString("inlineReportSlot1.DocumentStream");
-            this.inlineReportSlot1.ReportName = "HDDonTuiBaiThi";
+            this.inlineReportSlot1.ReportName = "HDDanhPhach";
             this.inlineReportSlot1.ReportScriptType = typeof(PerpetuumSoft.Reporting.Rendering.ReportScriptBase);
             // 
             // reportViewer1
@@ -69,6 +71,11 @@
             this.reportViewer1.SplashForm = null;
             this.reportViewer1.TabIndex = 3;
             this.reportViewer1.ViewMode = PerpetuumSoft.Reporting.View.ViewMode.ContinuedPage;
+            // 
+            // pdfExportFilter1
+            // 
+            this.pdfExportFilter1.Compress = true;
+            this.pdfExportFilter1.ExtraParameters = extraParameters1;
             // 
             // FrmInHDDanhPhach
             // 
@@ -90,5 +97,6 @@
         private DsVeMT dsVeMT1;
         private PerpetuumSoft.Reporting.View.ReportViewer reportViewer1;
         private PerpetuumSoft.Reporting.Components.InlineReportSlot inlineReportSlot1;
+        private PerpetuumSoft.Reporting.Export.Pdf.PdfExportFilter pdfExportFilter1;
     }
 }
