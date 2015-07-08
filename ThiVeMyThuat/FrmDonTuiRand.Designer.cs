@@ -38,6 +38,7 @@
             this.txt_tongtuibaithi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.index_page = new System.Windows.Forms.NumericUpDown();
+            this.btn_Update_DB = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.index_page)).BeginInit();
             this.SuspendLayout();
@@ -51,13 +52,13 @@
             this.dataGridView1.Location = new System.Drawing.Point(4, 56);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(579, 421);
+            this.dataGridView1.Size = new System.Drawing.Size(762, 421);
             this.dataGridView1.TabIndex = 0;
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(441, 489);
+            this.button1.Location = new System.Drawing.Point(624, 489);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(142, 34);
@@ -69,7 +70,7 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(291, 489);
+            this.button2.Location = new System.Drawing.Point(474, 489);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(142, 34);
@@ -148,13 +149,24 @@
             this.index_page.TabIndex = 7;
             this.index_page.ValueChanged += new System.EventHandler(this.txt_index_page_ValueChanged);
             // 
+            // btn_Update_DB
+            // 
+            this.btn_Update_DB.Location = new System.Drawing.Point(472, 1);
+            this.btn_Update_DB.Name = "btn_Update_DB";
+            this.btn_Update_DB.Size = new System.Drawing.Size(155, 45);
+            this.btn_Update_DB.TabIndex = 6;
+            this.btn_Update_DB.Text = "Cập nhật vào CSDL";
+            this.btn_Update_DB.UseVisualStyleBackColor = true;
+            this.btn_Update_DB.Click += new System.EventHandler(this.btn_Update_DB_Click);
+            // 
             // FrmDonTuiRand
             // 
             this.AcceptButton = this.btn_tron;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(590, 540);
+            this.ClientSize = new System.Drawing.Size(773, 540);
             this.Controls.Add(this.index_page);
+            this.Controls.Add(this.btn_Update_DB);
             this.Controls.Add(this.btn_tron);
             this.Controls.Add(this.txt_sobaithi_theotui);
             this.Controls.Add(this.label2);
@@ -188,5 +200,6 @@
         private System.Windows.Forms.TextBox txt_tongtuibaithi;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown index_page;
+        private System.Windows.Forms.Button btn_Update_DB;
     }
 }

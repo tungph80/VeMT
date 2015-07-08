@@ -221,5 +221,36 @@ namespace ThiVeMyThuat
             }
         }
 
+        public static void Update_DB ()
+        {
+            try
+            {
+                dbVeMTDataContext db = new dbVeMTDataContext();
+
+                foreach (CTui tui in lst_tui)
+                {
+                    foreach (vemt rc in tui.Lst_baithi_theotui)
+                    {
+                        //cần validate dữ liệu ở đây k?
+
+                        //lấy về đối tượng tương ứng
+                        var rc_in_DB = db.vemts.Where(o => o.sobaodanh == rc.sobaodanh).Single();
+                        rc_in_DB.tui = rc.tui;
+                        rc_in_DB.stttui = rc.stttui;
+                        rc_in_DB.phach = rc.phach;
+                    }
+                }
+
+                db.SubmitChanges();
+
+                MessageBox.Show("Cập nhật dữ liệu thành công");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
     }
 }

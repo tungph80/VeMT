@@ -91,6 +91,18 @@ namespace ThiVeMyThuat
             
         }
 
+        private void btn_Update_DB_Click(object sender, EventArgs e)
+        {
+            if (Utils.sotuibaithi > 0)
+            {
+                Utils.Update_DB();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng thực hiện trộn túi bài thi trước!");
+            }
+        }
+
         
 
 
