@@ -53,12 +53,14 @@ namespace ThiVeMyThuat
             //tính có bao nhiêu túi bài thi cần trộn
             Utils.sotuibaithi = ((int)db.vemts.Count() / Utils.sobaithi_theotui) + 1;
 
-            //khởi tạo đối tượng để random phòng thi cho mỗi lần lấy bài thi vào túi
-            Random r = new Random();
-            int k = r.Next(0, Utils.lst_phongthi.Count - 1);
+            
 
             for (int i = 0; i < Utils.sotuibaithi; i++)
             {
+                //khởi tạo đối tượng để random phòng thi cho mỗi lần lấy bài thi vào túi
+                Random r = new Random();
+                int k = r.Next(0, Utils.lst_phongthi.Count - 1);
+
                 //khởi tạo 1 túi bài thi
                 CTui tui = new CTui();
                 tui.sobaithi_con_theotui = Utils.sobaithi_theotui;
