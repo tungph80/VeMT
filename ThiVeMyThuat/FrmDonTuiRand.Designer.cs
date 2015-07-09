@@ -153,6 +153,7 @@
             // 
             // btn_Update_DB
             // 
+            this.btn_Update_DB.Enabled = false;
             this.btn_Update_DB.Location = new System.Drawing.Point(472, 1);
             this.btn_Update_DB.Name = "btn_Update_DB";
             this.btn_Update_DB.Size = new System.Drawing.Size(155, 45);

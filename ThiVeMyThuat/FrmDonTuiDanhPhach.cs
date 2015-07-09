@@ -78,7 +78,7 @@ namespace ThiVeMyThuat
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Utils.Show_Exception_Msg(ex);
             }
 
         }

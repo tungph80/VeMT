@@ -35,8 +35,7 @@ namespace ThiVeMyThuat
             {
                 index_of_lst_tui = Utils.sotuibaithi - 1;
             }
-
-            //dataGridView1.DataSource = Utils.lst_tui[index_of_lst_tui].Lst_baithi_theotui;
+            
             index_page.Value = index_of_lst_tui + 1;
         }
 
@@ -47,8 +46,7 @@ namespace ThiVeMyThuat
             {
                 index_of_lst_tui = 0;
             }
-
-            //dataGridView1.DataSource = Utils.lst_tui[index_of_lst_tui].Lst_baithi_theotui;
+                        
             index_page.Value = index_of_lst_tui + 1;
         }
 
@@ -57,18 +55,18 @@ namespace ThiVeMyThuat
             try
             {
                 Utils.sobaithi_theotui = int.Parse(txt_sobaithi_theotui.Text);
-                Utils.TronTuiBaiThi();
+                CDonTui_Va_DanhPhach_ctrl.TronTuiBaiThi();
                 index_page.Minimum = 1;
-                index_page.Maximum = Utils.sotuibaithi;
-                //dataGridView1.DataSource = Utils.lst_tui[index_of_lst_tui].Lst_baithi_theotui;
+                index_page.Maximum = Utils.sotuibaithi;                
                 index_page.Value = index_page.Value + 1;
                 index_page.Value = 1;
 
                 txt_tongtuibaithi.Text = Utils.sotuibaithi.ToString();
+                btn_Update_DB.Enabled = true;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                Utils.Show_Exception_Msg(ex);
             }
 
         }
@@ -98,17 +96,22 @@ namespace ThiVeMyThuat
 
         private void btn_Update_DB_Click(object sender, EventArgs e)
         {
-
             if (Utils.sotuibaithi > 0)
             {
-                if (MessageBox.Show("Bạn có thực sự muốn thay đổi số phách hiện tại?", "Xác nhận!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.Yes)
+                if (MessageBox.Show(Constants.Msg_Confirm_Update, Constants.Msg_Caption_Warning, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.Yes)
                 {
-                    Utils.Update_DB();
+                    //hiển thị trạng thái chuột đợi
+                    Cursor.Current = Cursors.WaitCursor;
+
+                    CDonTui_Va_DanhPhach_ctrl.Update_DB();
+
+                    //hiển thị trạng thái chuột bt
+                    Cursor.Current = Cursors.Default;
                 }
             }
             else
             {
-                MessageBox.Show("Vui lòng thực hiện trộn túi bài thi trước!");
+                MessageBox.Show(Constants.Msg_Mixing_Exam_first, Constants.Msg_Caption_Error, MessageBoxButtons.OK,MessageBoxIcon.Hand);
             }
         }
 
@@ -116,8 +119,10 @@ namespace ThiVeMyThuat
         {
             try
             {
+                //chuyển trạng thái chuột sang chờ đợi
+                Cursor.Current = Cursors.WaitCursor;
 
-                string strPath = Application.StartupPath + @"\SQLBackup\";
+                string strPath = Application.StartupPath + Constants.URL_Backup_Folder ;
                 if (!Directory.Exists(strPath))
                 {
                     Directory.CreateDirectory(strPath);
@@ -128,7 +133,7 @@ namespace ThiVeMyThuat
 
                 //Connect to DB
                 SqlConnection connect;
-                string con = System.Configuration.ConfigurationManager.ConnectionStrings["ThiVeMyThuat.Properties.Settings.XDAConnectionString"].ConnectionString; // "Data Source=THAONHI-PC\\SQL2014;Initial Catalog=XDA;Integrated Security=True";
+                string con = System.Configuration.ConfigurationManager.ConnectionStrings[Constants.Conn_Name_in_AppConfig].ConnectionString; // "Data Source=THAONHI-PC\\SQL2014;Initial Catalog=XDA;Integrated Security=True";
                 connect = new SqlConnection(con);
                 connect.Open();
                 //----------------------------------------------------------------------------------------------------
@@ -141,11 +146,14 @@ namespace ThiVeMyThuat
 
                 connect.Close();
 
-                MessageBox.Show("Tạo bản sao dữ liệu thành công", "Back", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //chuyển trạng thái chuột về bt
+                Cursor.Current = Cursors.Default;
+
+                MessageBox.Show(Constants.Msg_Backup_Success,Constants.Msg_Caption_Success, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                Utils.Show_Exception_Msg(ex);
             }
         }
 
@@ -161,12 +169,15 @@ namespace ThiVeMyThuat
 
                     if (File.Exists(strPath))
                     {
-                        if (MessageBox.Show("Bạn có chắc chắn muốn khôi phục dữ liệu từ bản sao này không?", "Back", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        if (MessageBox.Show(Constants.Msg_Confirm_Restore_Data, Constants.Msg_Caption_Confirm, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
+                            //chuyển trạng thái chuột sang chờ đợi
+                            Cursor.Current = Cursors.WaitCursor;
+
                             //Connect SQL-----------
                             //Connect to DB
                             SqlConnection connect;
-                            string con = System.Configuration.ConfigurationManager.ConnectionStrings["ThiVeMyThuat.Properties.Settings.XDAConnectionString"].ConnectionString; // "Data Source=THAONHI-PC\\SQL2014;Initial Catalog=XDA;Integrated Security=True";Data Source=thaonhi-pc\sql2014;Initial Catalog=XDA;Integrated Security=True
+                            string con = System.Configuration.ConfigurationManager.ConnectionStrings[Constants.Conn_Name_in_AppConfig].ConnectionString; // "Data Source=THAONHI-PC\\SQL2014;Initial Catalog=XDA;Integrated Security=True";Data Source=thaonhi-pc\sql2014;Initial Catalog=XDA;Integrated Security=True
                             connect = new SqlConnection(con);
                             connect.Open();
                             //-----------------------------------------------------------------------------------------
@@ -180,16 +191,19 @@ namespace ThiVeMyThuat
                             //--------------------------------------------------------------------------------------------------------
                             connect.Close();
 
-                            MessageBox.Show("Khôi phục dữ liệu thành công", "Restoration", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //chuyển trạng thái chuột về bt
+                            Cursor.Current = Cursors.Default;
+
+                            MessageBox.Show(Constants.Msg_Restore_Success, Constants.Msg_Caption_Success, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                     else
-                        MessageBox.Show(@"Không tồn tại file vừa chọn.", "Restoration", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(Constants.Msg_NOT_Existent_File, Constants.Msg_Caption_Error, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                Utils.Show_Exception_Msg(ex);
             }
         }
 

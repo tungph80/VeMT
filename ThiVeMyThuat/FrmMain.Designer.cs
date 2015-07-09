@@ -138,7 +138,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(171, 59);
             this.button7.TabIndex = 5;
-            this.button7.Text = "Dồn túi bài thi và đánh phách Random - DuongNH";
+            this.button7.Text = "Dồn túi bài thi và đánh phách Random";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
