@@ -53,14 +53,12 @@ namespace ThiVeMyThuat
             //tính có bao nhiêu túi bài thi cần trộn
             Utils.sotuibaithi = ((int)db.vemts.Count() / Utils.sobaithi_theotui) + 1;
 
-            
+            //khởi tạo đối tượng để random phòng thi cho mỗi lần lấy bài thi vào túi
+            Random r = new Random();
+            int k = r.Next(0, Utils.lst_phongthi.Count - 1);
 
             for (int i = 0; i < Utils.sotuibaithi; i++)
             {
-                //khởi tạo đối tượng để random phòng thi cho mỗi lần lấy bài thi vào túi
-                Random r = new Random();
-                int k = r.Next(0, Utils.lst_phongthi.Count - 1);
-
                 //khởi tạo 1 túi bài thi
                 CTui tui = new CTui();
                 tui.sobaithi_con_theotui = Utils.sobaithi_theotui;
@@ -166,7 +164,7 @@ namespace ThiVeMyThuat
             #endregion
 
             #region đánh số túi cho từng túi bài thi
-            Danh_sotui();
+            Danh_matui();
             #endregion
 
         }
@@ -188,16 +186,43 @@ namespace ThiVeMyThuat
             }
         }
 
-        private static void Danh_sotui()
+        private static void Danh_matui()
         {
+            //khởi tạo đối tượng để random mã túi
+            Random r = new Random();
+
+            //khởi tạo mảng các số từ 0 đến lst_tui.count -1 để lấy random k bị lặp lại.
+            List<int> arr = new List<int>();
+            for (int i = 0; i < Utils.lst_tui.Count; i++)
+            {
+                arr.Add(i);
+            }
+
+            //gán mã túi và stt túi cho từng túi
+            for (int i = 0; i < Utils.lst_tui.Count(); i++)
+            {
+                //lấy ngẫu nhiên mã túi ( k )
+                int index = r.Next(0, arr.Count - 1); //biến lấy ra 1 chỉ số ngẫu nhiên trong số phần tử của arr
+                int k = arr[index]; //lấy ra giá trị của phần tử tương ứng trong arr, cũng là mã túi tương ứng.
+                arr.RemoveAt(index); //sau khi lấy ra -> xóa ngay phần tử vừa lấy của arr để tránh việc lặp lại mã túi.
+
+                for (int j = 0; j < Utils.lst_tui[i].Lst_baithi_theotui.Count(); j++)
+                {
+                    //gán mã túi
+                    Utils.lst_tui[i].Lst_baithi_theotui[j].tui = k + 1;
+                    //gán số thứ tự theo từng túi
+                    Utils.lst_tui[i].Lst_baithi_theotui[j].stttui = j + 1;
+                }
+            }
+
+            //sắp xếp lại lst_tui tuần tự theo mã túi
+            Utils.lst_tui = Utils.lst_tui.OrderBy(o => o.Lst_baithi_theotui[0].tui).ToList();
+
+            //gán số phách cho bài thi tuần tự theo mã túi.
             for (int i = 0; i < Utils.lst_tui.Count(); i++)
             {
                 for (int j = 0; j < Utils.lst_tui[i].Lst_baithi_theotui.Count(); j++)
                 {
-                    //gán mã túi
-                    Utils.lst_tui[i].Lst_baithi_theotui[j].tui = i + 1;
-                    //gán số thứ tự theo từng túi
-                    Utils.lst_tui[i].Lst_baithi_theotui[j].stttui = j + 1;
                     //gán số phách cho từng bài thi
                     Utils.lst_tui[i].Lst_baithi_theotui[j].phach = i * Utils.sobaithi_theotui + j + 1;
                 }
