@@ -88,6 +88,7 @@ namespace ThiVeMyThuat
                             {
                                 //Đ: lấy tuần tự số <phandoan> bài từ phòng thi ném vào trong túi hiện tại
                                 Move_record_from_pt_to_tui(tui, pt, chiadoan);
+                                k = k + 1;
                             }
                             else
                             {
